@@ -35,7 +35,8 @@ Required format: [2023tr-ax] DreamFusion- Text-to-3D using 2D Diffusion.pdfconda
 """
 README_FILE_PATH = "./papers.txt"
 OUTPUT_DIRECTORY = "../All_Papers/"
-
+ARXIV_TAG = ['YEAR', 'tr-ax']
+CONFERENCE_PAPER_TAG = ['YEAR', 'tr-cp']
 
 class FileRecord:
     def __init__(self, fname, p_name, p_url, pdf_url, p_conf, p_year) -> None:
@@ -87,9 +88,11 @@ def process_source_file(contents: List[str]) -> Dict:
                 pdf_link = p_link
 
             if "arxiv" in p_conf.lower():
-                f_name = f'[{p_year}tr-ax] {p_name.replace(":", "-")}.pdf'
+                if ARXIV_TAG[0] == 'YEAR':
+                    f_name = f'[{p_year}{ARXIV_TAG[1]}] {p_name.replace(":", "-")}.pdf'
             else:
-                f_name = f'[{p_year}tr-cp] {p_name.replace(":", "-")}.pdf'
+                if CONFERENCE_PAPER_TAG[0] == 'YEAR':
+                    f_name = f'[{p_year}{CONFERENCE_PAPER_TAG[1]}] {p_name.replace(":", "-")}.pdf'
 
             metadata[heading][subheading].append(
                 FileRecord(f_name, p_name, p_link, pdf_link, p_conf, p_year)
