@@ -1,5 +1,5 @@
 # Introduction
-Download the papers in `Section` and `subsection` formats by creating the folders for the same. Formats of the input `papers.txt` and file saving output filenames are provided below:
+Downloads the GitHub awesome papers (example: [3D Diffusion Papers](https://github.com/cwchenwang/awesome-3d-diffusion)) in `Section` and `subsection` formats by creating the folders for the same. Formats of the input `papers.txt` and file saving output filenames are provided below:
 ```
 ## 2D Diffusion with Pretraining
 ### Text-to-3D Object Generation
