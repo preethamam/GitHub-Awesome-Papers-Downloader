@@ -33,7 +33,7 @@ logging.config.dictConfig(
 
 Required format: [2023tr-ax] DreamFusion- Text-to-3D using 2D Diffusion.pdfconda 
 """
-README_FILE_PATH = "./README.txt"
+README_FILE_PATH = "./papers.txt"
 OUTPUT_DIRECTORY = "../All_Papers/"
 
 
