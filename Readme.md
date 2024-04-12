@@ -11,7 +11,7 @@ Downloads the GitHub awesome papers (example: [3D Diffusion Papers](https://gith
 - [Compositional 3D Scene Generation using Locally Conditioned Diffusion](https://arxiv.org/abs/2303.12218), Po and Wetzstein, Arxiv 2023
 ```
 
-`Required format`: [2023tr-ax] DreamFusion- Text-to-3D using 2D Diffusion.pdf
+`Required output filename format`: [2023tr-ax] DreamFusion- Text-to-3D using 2D Diffusion.pdf
 
 # Authors
 1. Aniketh Manjunath ([ChaoyiZh](https://github.com/ChaoyiZh)), M.S in Computer Science, University of Southern California.
