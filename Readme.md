@@ -13,15 +13,13 @@ Download the papers in `Section` and `subsection` formats by creating the folder
 
 `Required format`: [2023tr-ax] DreamFusion- Text-to-3D using 2D Diffusion.pdf
 
-# Feedback
-Please rate and provide feedback for the further improvements.
-
 # Authors
 1. Aniketh Manjunath ([ChaoyiZh](https://github.com/ChaoyiZh)), M.S in Computer Science, University of Southern California.
 
 2. Dr. Preetham Manjunatha, Ph.D in Civil Engineering, M.S in Computer Science, M.S in Electrical Engineering and M.S in Civil Engineering, University of Southern California.
 
-
+# Feedback
+Please rate and provide feedback for the further improvements.
 
 
 
