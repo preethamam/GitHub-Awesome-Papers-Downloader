@@ -14,9 +14,9 @@ Downloads the GitHub awesome papers (example: [3D Diffusion Papers](https://gith
 `Required output filename format`: [2023tr-ax] DreamFusion- Text-to-3D using 2D Diffusion.pdf
 
 # Authors
-1. Aniketh Manjunath ([vma1996](https://github.com/vma1996)), M.S in Computer Science, University of Southern California.
+1. Dr. Preetham Manjunatha, Ph.D in Civil Engineering, M.S in Computer Science, M.S in Electrical Engineering and M.S in Civil Engineering, University of Southern California.
 
-2. Dr. Preetham Manjunatha, Ph.D in Civil Engineering, M.S in Computer Science, M.S in Electrical Engineering and M.S in Civil Engineering, University of Southern California.
+2. Aniketh Manjunath ([vma1996](https://github.com/vma1996)), M.S in Computer Science, University of Southern California.
 
 # Feedback
 Please rate and provide feedback for the further improvements.
