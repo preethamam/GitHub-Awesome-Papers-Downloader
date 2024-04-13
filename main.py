@@ -34,7 +34,7 @@ logging.config.dictConfig(
 Required format: [2023tr-ax] DreamFusion- Text-to-3D using 2D Diffusion.pdfconda 
 """
 README_FILE_PATH = "./papers.txt"
-OUTPUT_DIRECTORY = "../All_Papers/"
+OUTPUT_DIRECTORY = "/Users/preethamam/Downloads/All_Papers/"
 ARXIV_TAG = ['YEAR', 'tr-ax']
 CONFERENCE_PAPER_TAG = ['YEAR', 'tr-cp']
 
@@ -108,25 +108,30 @@ def create_dir(dir: str, sub_dir: str) -> str:
 
 
 def download_file(record: FileRecord, output_path: str):
-    try:
-        if os.path.exists(os.path.join(output_path, record.filename)):
-            print(
-                "[SKIPPING] File exists -", os.path.join(output_path, record.filename)
-            )
-            return
+    if os.path.exists(os.path.join(output_path, record.filename)):
+        print(
+            "[SKIPPING] File exists -", os.path.join(output_path, record.filename)
+        )
+        return
 
-        # Request URL and get response object
-        response = requests.get(record.url_pdf, stream=True)
-
-        # isolate PDF filename from URL
-        file_path = os.path.join(output_path, record.filename)
-        if response.status_code == 200:
+    # Request URL and get response object
+    response = requests.get(record.url_pdf, stream=True)
+    content_type = response.headers.get('content-type')
+    
+    # Download the PDF filename from URL
+    file_path = os.path.join(output_path, record.filename)
+    if response.status_code == 200:            
+        if 'application/pdf' in content_type:
             # Save in current working directory
             with open(file_path, "wb") as pdf_object:
                 pdf_object.write(response.content)
-    except:
-        err = ["Downloading Content Failed:", record.name, record.url_pdf]
-        logging.debug(err)
+        elif 'text/html' in content_type:
+            ext = '.html'
+            err = ["Downloading Content Failed. It is html page", output_path, record.name, record.url_pdf]
+            logging.debug(err)
+        else:
+            ext = ''
+            logging.debug('Unknown type: {}'.format(content_type))
 
 
 def fetch_files(metadata: Dict[str, Dict[str, FileRecord]]) -> None:
